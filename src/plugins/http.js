@@ -1,4 +1,4 @@
-const serverIp = "localhost"
+const serverIp = "68.183.11.247"
 
 const get = async (url) => {
     const options = {
