@@ -1,33 +1,19 @@
 import './App.css';
-import {useEffect, useRef, useState} from "react";
-import UserForm from "./components/UserForm";
-import UserGallery from "./components/UserGallery";
+import {get} from "./plugins/http";
 
 function App() {
-    const [users, setUsers] = useState([])
 
-    async function send(user) {
-        const options = {
-            method: "POST",
-            headers: {
-                "content-type":"application/json"
-            },
-            body: JSON.stringify(user)
-        }
-
-        const res = await fetch("http://localhost:4000/createUser", options)
-        const data = await res.json()
-        console.log(data)
-
-        setUsers(data.users)
+    const getData = async () => {
+        const res = await get("info")
+        console.log(res)
     }
 
     return (
-            <div className="">
-                <UserForm send={send}/>
-                <UserGallery users={users} setUsers={setUsers}/>
-            </div>
+        <div className="p50">
+            <button onClick={getData}>GET INFO</button>
+        </div>
     );
 }
 
 export default App;
+

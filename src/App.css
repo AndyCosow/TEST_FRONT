@@ -47,43 +47,48 @@
 .pl20 {
   padding-left: 20px;
 }
-
-.gameMap {
-  height: 800px;
-  width: 800px;
-  background-color: #f1f1f1;
-  display: flex;
-  flex-wrap: wrap;
+.ml20 {
+  margin-left: 20px;
 }
 
-.box {
-  height: 100px;
-  width: 100px;
-  box-sizing: border-box;
+.mt20 {
+ margin-top: 20px;
 }
 
-.border {
-  border: 1px solid;
-}
-
-.playerImg {
-  height: 100px;
-  width: 100px;
-}
-
-.dice {
-  background-image: url("https://ecdn.teacherspayteachers.com/thumbitem/Dice-and-Dominoes-Clipart-Graphics-FREE-1497374706/original-306749-3.jpg");
-  height: 100px;
-  width: 100px;
-}
-
-.card {
-  margin: 10px;
+.p10 {
   padding: 10px;
-  width: 250px;
-  background-color: #f1f1f1;
 }
 
-.card img {
-  width: 100%;
+/*CUSTOM STYLES*/
+
+.gameBoard {
+  height: 700px;
+  width: 700px;
+  position: relative;
+}
+
+.cell {
+  box-sizing: border-box;
+  height: 70px;
+  width: 70px;
+  border: 1px solid black;
+}
+
+.cellEmpty {
+  box-sizing: border-box;
+  height: 70px;
+  width: 70px;
+}
+
+.roll {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+}
+
+.player {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 3px;
 }
